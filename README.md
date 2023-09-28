@@ -207,11 +207,11 @@ variable "queue_properties" {
     }))
 
     logging = optional(object({
-      delete                = bool
-      read                  = bool
-      write                 = bool
-      version               = string
-      retention_policy_days = optional(number)
+      retention_policy_days = optional(number, 7)
+      delete                = optional(bool, true)
+      read                  = optional(bool, true)
+      write                 = optional(bool, true)
+      version               = optional(string, "1.0")
     }))
 
     minute_metrics = optional(object({

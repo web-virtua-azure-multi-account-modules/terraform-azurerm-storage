@@ -208,11 +208,11 @@ variable "queue_properties" {
     }))
 
     logging = optional(object({
-      delete                = bool             # Indicates whether all delete requests should be logged
-      read                  = bool             # Indicates whether all read requests should be logged
-      write                 = bool             # Indicates whether all write requests should be logged
-      version               = string           # The version of storage analytics to configure
-      retention_policy_days = optional(number) # Specifies the number of days that logs will be retained
+      retention_policy_days = optional(number, 7)     # Specifies the number of days that logs will be retained
+      delete                = optional(bool, true)    # Indicates whether all delete requests should be logged
+      read                  = optional(bool, true)    # Indicates whether all read requests should be logged
+      write                 = optional(bool, true)    # Indicates whether all write requests should be logged
+      version               = optional(string, "1.0") # The version of storage analytics to configure
     }))
 
     minute_metrics = optional(object({
