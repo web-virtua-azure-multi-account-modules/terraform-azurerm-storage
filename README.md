@@ -23,7 +23,7 @@ provider "azurerm" {
 ```
 
 
-## Features enable of Compartment configurations for this module:
+## Features enable of Storage Accont configurations for this module:
 
 - Storage account
 - Storage container
@@ -97,7 +97,7 @@ module "storage_account_test" {
 | storage_type | `string` | `Standard` | no | Account tier type for storage account, options are Standard and Premium, for BlockBlobStorage and FileStorage accounts only Premium is valid | `*`Standard <br> `*`Premium |
 | storage_replication_type | `string` | `LRS` | no | Account replication type for storage account, the options are LRS, GRS, RAGRS, ZRS, GZRS and RAGZRS | `*`LRS <br> `*`GRS `*`RAGRS <br> `*`ZRS `*`GZRS <br> `*`RAGZRS |
 | use_tags_default | `bool` | `true` | no | If true will be use the tags default to resources | `*`false <br> `*`true |
-| tags | `map(any)` | `{}` | no | Tags to compartment | `-` |
+| tags | `map(any)` | `{}` | no | Tags to Storage Accont | `-` |
 | account_kind | `string` | `StorageV2` | no | Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2 | `*`BlobStorage <br> `*`BlockBlobStorage `*`FileStorage <br> `*`Storage `*`StorageV2  |
 | cross_tenant_replication_enabled | `bool` | `true` | no | If true, should cross Tenant replication be enabled | `*`false <br> `*`true |
 | access_tier | `string` | `Hot` | no | Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot | `*`Hot <br> `*`Cool |
